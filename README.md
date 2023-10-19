@@ -29,7 +29,12 @@ npm install
 ```
 npm run start
 ```
-若看到以下訊息即為安裝成功，可開始瀏覽
+若看到以下訊息即為安裝成功，可在瀏覽器輸入http://localhost:3000 開始瀏覽
 ```
 express server is running on http://localhost:3000
 ```
+## 使用工具
+- express: 4.18.2
+- express-handlebars: 7.1.2
+- Node.js: 18.18.2
+- Bootstrap: 5.3.0
