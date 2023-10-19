@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 
 app.get('/restaurants', (req, res) => {
   const keyword = req.query.keyword?.trim()
-  console.log(keyword)
   const matchedRestaurants = keyword ? restaurants.filter((rts) =>
     Object.values(rts).some((property) => {
       if (typeof property === 'string' && property) {
