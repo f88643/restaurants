@@ -33,6 +33,8 @@ npm run start
 ```
 express server is running on http://localhost:3000
 ```
+
+欲退出請連按兩次Ctrl + C
 ## 使用工具
 - express: 4.18.2
 - express-handlebars: 7.1.2
