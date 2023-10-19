@@ -29,3 +29,7 @@ npm install
 ```
 npm run start
 ```
+若看到以下訊息即為安裝成功，可開始瀏覽
+```
+express server is running on http://localhost:3000
+```
