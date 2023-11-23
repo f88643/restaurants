@@ -7,6 +7,9 @@
 - 可點擊任一餐廳你獲取更多資訊
 * 輸入關鍵字以搜尋想要之餐廳
 + 點選左上角可返回首頁
+- 編輯餐廳資訊
+- 刪除不想要的餐廳
+- 新增喜歡的餐廳
 
 ## 使用說明
 
@@ -25,6 +28,20 @@ cd restaurants/
 ```
 npm install
 ```
+4.在SQL中建立DATABASE
+
+```
+CREATE DATABASE restaurant;
+```
+5.建立table
+
+```
+npx sequelize db:migrate 
+```
+6.上傳種子資料
+```
+npx sequelize db:seed:all  
+```
 4.執行
 ```
 npm run start
@@ -38,5 +55,8 @@ express server is running on http://localhost:3000
 ## 使用工具
 - express: 4.18.2
 - express-handlebars: 7.1.2
-- Node.js: 18.18.2
-- Bootstrap: 5.3.0
+- method-override: 3.0.0
+- mysql2: 3.2.0
+- sequelize: 6.30.0
+- sequelize-cli: 6.6.0
+  
