@@ -7,7 +7,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='name' id="name" aria-describedby="name"
-          value="{{restaurant.name}}">
+          value="{{restaurant.name}}" required>
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='name_en' id="name_en" aria-describedby="name_en"
-          value="{{restaurant.name_en}}">
+          value="{{restaurant.name_en}}" required>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='category' id="category" aria-describedby="category"
-          value="{{restaurant.category}}">
+          value="{{restaurant.category}}" required>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='image' id="image" aria-describedby="image"
-          value="{{restaurant.image}}">
+          value="{{restaurant.image}}" required>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='location' id="location" aria-describedby="location"
-          value="{{restaurant.location}}">
+          value="{{restaurant.location}}" required>
       </div>
     </div>
   </div>
@@ -67,7 +67,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='phone' id="phone" aria-describedby="phone"
-          value="{{restaurant.phone}}">
+          value="{{restaurant.phone}}" required>
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='description' id="description" aria-describedby="description"
-          value="{{restaurant.description}}">
+          value="{{restaurant.description}}" required>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@
       </div>
       <div class="col-6">
         <input class="form-control" type="text" name='google_map' id="google_map" aria-describedby="google_map"
-          value="{{restaurant.google_map}}">
+          value="{{restaurant.google_map}}" required>
       </div>
     </div>
   </div>
@@ -102,8 +102,8 @@
         <label for="rating" class="col-form-label">評分</label>
       </div>
       <div class="col-6">
-        <input class="form-control" type="number" name='rating' id="rating" aria-describedby="rating"
-          value="{{restaurant.rating}}">
+        <input class="form-control" type="number" min="1" max="5" name='rating' id="rating" aria-describedby="rating"
+          value="{{restaurant.rating}}" required>
       </div>
     </div>
   </div>

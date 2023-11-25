@@ -19,8 +19,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/restaurants', (req, res) => {
-  const keyword = req.query.search?.trim();
-
+  const keyword = req.query.keyword?.trim();
   restaurantData.findAll({
     raw: true
   })
