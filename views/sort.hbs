@@ -11,26 +11,24 @@
             <button class="btn btn-major p-2 bd-highlight" type="submit" id="search-button"><i
                 class="fa-solid fa-magnifying-glass p-2 bd-highlight"></i></button>
           </div>
-
-          <div class="ms-auto p-2 bd-highligh">
-            <form action="/restaurants/sort" method="POST">
-              <select name="sort" id="sort" aria-describedby="sort" value="">
-                <option value="">依照...排序</option>
-                <option value="az">A-Z</option>
-                <option value="za">Z-A</option>
-                <option value="style">類別</option>
-                <option value="area">地區</option>
-              </select>
-              <button type="submit">排序</button>
-            </form>
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              排序方法
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="./{{value}}" type="submit" value='az'>A-Z</a></li>
+              <li><a class="dropdown-item" href="./{{value}}" type="submit" value="za">Z-A</a></li>
+              <li><a class="dropdown-item" href="./{{value}}" type="submit" value="time">時間排序</a></li>
+            </ul>
           </div>
         </div>
       </form>
     </div>
   </div>
 </div>
-
 <!-- restaurant list -->
+
 <div class="position-absolute start-50">{{#if message}}
   {{message}}
   {{/if}}
@@ -76,4 +74,5 @@
     <input type="hidden" name="page" value="{{next}}">
     <button type="submit">next</button>
   </form>
+
 </div>
