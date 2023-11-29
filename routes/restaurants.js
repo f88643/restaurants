@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
   const sort = req.query.sort
   const page = parseInt(req.query.page) || 1
   const limit = 6
-  console.log(sort)
 
   const sortOptions = {
     az: [['name', 'ASC']],
@@ -25,7 +24,6 @@ router.get('/', (req, res) => {
   })
     .then((restaurants) => {
       const pageControl = restaurants.length
-      console.log(pageControl)
       const matchedRestaurants = keyword
         ? restaurants.filter((restaurant) =>
           Object.values(restaurant).some((property) => {
