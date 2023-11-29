@@ -55,11 +55,13 @@
               </span>
             </div>
           </div>
-          <a href="/restaurants/edit/{{this.id}}">edit</a>
-          <a href="/restaurants/{{this.id}}" class="text-secondary">detail</a>
-          <form action="/restaurants/{{this.id}}?_method=DELETE" method="POST" style="display: inline;">
-            <button type="submit">delete</button>
-          </form>
+          <div>
+            <a href="/restaurants/edit/{{this.id}}">edit</a>
+            <a href="/restaurants/{{this.id}}" class="text-secondary">detail</a>
+            <form action="/restaurants/{{this.id}}?_method=DELETE" method="POST" style="display: inline;">
+              <button type="submit">delete</button>
+            </form>
+          </div>
         </div>
         {{/each}}
       </div>
