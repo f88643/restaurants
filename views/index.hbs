@@ -55,11 +55,12 @@
               </span>
             </div>
           </div>
-          <div>
-            <a href="/restaurants/edit/{{this.id}}">edit</a>
-            <a href="/restaurants/{{this.id}}" class="text-secondary">detail</a>
-            <form action="/restaurants/{{this.id}}?_method=DELETE" method="POST" style="display: inline;">
-              <button type="submit">delete</button>
+          <div class="d-flex justify-content-end">
+            <a style=" width:10% " href="/restaurants/edit/{{this.id}}">edit</a>
+            <a href="/restaurants/{{this.id}}" class="text-secondary" style=" width:14%">detail</a>
+            <form action="/restaurants/{{this.id}}?_method=DELETE" method="POST">
+              <button style="border: 1px solid white; background-color:white" type="submit"><i <i
+                  class="fa-solid fa-trash" style="color: #000000;"></i></button>
             </form>
           </div>
         </div>
