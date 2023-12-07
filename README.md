@@ -39,16 +39,12 @@ npm install
 ```
 CREATE DATABASE restaurant;
 ```
-5.建立table
+5.建立table以及種子資料
 
 ```
-npx sequelize db:migrate 
+npm run seed
 ```
-6.上傳種子資料
-```
-npx sequelize db:seed:all  
-```
-4.執行
+6.執行
 ```
 npm run start
 ```
@@ -65,4 +61,6 @@ express server is running on http://localhost:3000
 - mysql2: 3.2.0
 - sequelize: 6.30.0
 - sequelize-cli: 6.6.0
-  
+- bcryptjs: 2.4.3
+- connect-flash: 0.1.1
+- passport: 0.6.0
