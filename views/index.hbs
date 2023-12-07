@@ -21,7 +21,7 @@
                 <option value="style">類別</option>
                 <option value="area">地區</option>
               </select>
-              <button type="submit">排序</button>
+              <button class="btn btn-light" type="submit">排序</button>
             </form>
           </div>
         </div>
@@ -31,9 +31,8 @@
 </div>
 
 <!-- restaurant list -->
-<div class="position-absolute start-50">{{#if message}}
-  {{message}}
-  {{/if}}
+<div class="position-absolute start-50">
+  {{> message}}
 
 </div>
 <div class=" container mt-5">
@@ -53,30 +52,32 @@
                 {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
+              <hr>
+              <div class="d-flex justify-content-end">
+                <a style=" width:10% " href="/restaurants/edit/{{this.id}}">edit</a>
+                <a href="/restaurants/{{this.id}}" class="text-secondary" style=" width:14%">detail</a>
+                <form action="/restaurants/{{this.id}}?_method=DELETE" method="POST">
+                  <button style="border: 1px solid white; background-color:white" type="submit"><i <i
+                      class="fa-solid fa-trash" style="color: #000000;"></i></button>
+                </form>
+              </div>
             </div>
           </div>
-          <div class="d-flex justify-content-end">
-            <a style=" width:10% " href="/restaurants/edit/{{this.id}}">edit</a>
-            <a href="/restaurants/{{this.id}}" class="text-secondary" style=" width:14%">detail</a>
-            <form action="/restaurants/{{this.id}}?_method=DELETE" method="POST">
-              <button style="border: 1px solid white; background-color:white" type="submit"><i <i
-                  class="fa-solid fa-trash" style="color: #000000;"></i></button>
-            </form>
-          </div>
+
         </div>
         {{/each}}
       </div>
     </div>
   </div>
 </div>
-<div class="position-absolute start-50">
+<div style="margin-left:45%;">
   <form action="/restaurants" method="GET" style="display: inline;">
     <input type="hidden" name="page" value="{{prev}}">
-    <button type="submit">prev</button>
+    <button class="btn btn-light" type="submit"><i class="fa-solid fa-backward-step"></i></button>
   </form>
   <span>page: {{page}}</span>
   <form action="/restaurants" method="GET" style="display: inline;">
     <input type="hidden" name="page" value="{{next}}">
-    <button type="submit">next</button>
+    <button class="btn btn-light" type="submit"><i class="fa-solid fa-forward-step"></i></button>
   </form>
 </div>

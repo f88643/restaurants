@@ -1,19 +1,49 @@
 'use strict';
+const bcrypt = require('bcryptjs')
 
-const initialData = require('../public/jsons/restaurant.json').results
+const initialData = require('../public/jsons/restaurant.json').results;
 initialData.forEach((data) => {
+  data.createdAt = new Date();
+  data.updatedAt = new Date();
+  if (data.id <= 3) {
+    data.userID = 1
+  }
+  if (data.id > 3 && data.id <= 6) {
+    data.userID = 2
+  }
   delete data.id
-  data.createdAt = new Date()
-  data.updatedAt = new Date()
-})
+});
+
+
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('restaurants', initialData)
+    const hash = await bcrypt.hash('12345678', 10)
+    await queryInterface.bulkInsert('restaurants', initialData);
+    await queryInterface.bulkInsert('Users', [
+      {
+        id: 1,
+        name: 'root',
+        email: 'user1@example.com',
+        password: hash,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: 2,
+        name: 'root',
+        email: 'user2@example.com',
+        password: hash,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ]);
+
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('restaurants', null)
+    await queryInterface.bulkDelete('restaurants', null);
+    await queryInterface.bulkDelete('users', null);
   }
 };

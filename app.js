@@ -1,10 +1,11 @@
 const express = require('express')
 const { engine } = require('express-handlebars')
-
+const passport = require('passport')
 const methodOverride = require('method-override')
 const router = require('./routes/index')
 const flash = require('connect-flash')
 const session = require('express-session')
+
 const messageHandler = require('./middlewares/message-handler')
 const app = express()
 const port = 3000
@@ -21,8 +22,11 @@ app.use(session({
   saveUninitialized: false
 }))
 app.use(flash())
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(messageHandler)
 app.use(router)
+
 
 app.get('/new', (req, res) => {
   res.render('new', { message: req.flash('success') })
