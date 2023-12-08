@@ -44,7 +44,11 @@ CREATE DATABASE restaurant;
 ```
 npm run seed
 ```
-6.執行
+6.環境參數設定
+
+依照env.example的內容新增'.env'檔案，並依照提示進行修改
+
+7.執行
 ```
 npm run start
 ```
