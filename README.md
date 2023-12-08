@@ -56,6 +56,11 @@ npm run start
 ```
 express server is running on http://localhost:3000
 ```
+內建使用者帳密:
+  1. email: user1@example.com Password: 12345678
+  2. email: user2@example.com Password: 12345678
+     
+
 
 欲退出請連按兩次Ctrl + C
 ## 使用工具
