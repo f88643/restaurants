@@ -21,7 +21,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     const hash = await bcrypt.hash('12345678', 10)
     await queryInterface.bulkInsert('restaurants', initialData);
-    await queryInterface.bulkInsert('Users', [
+    await queryInterface.bulkInsert('users', [
       {
         id: 1,
         name: 'root',
